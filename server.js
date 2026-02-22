@@ -175,14 +175,14 @@ app.get("/", (req, res) => {
 // =============================
 app.post("/verify", upload.single("selfie"), async (req, res) => {
   try {
-    const { referenceImageUrl } = req.body;
-    const selfieFile = req.file;
+   const referenceImageUrl = req.body?.referenceImageUrl;
+const selfieFile = req.file;
 
-    if (!referenceImageUrl || !selfieFile) {
-      return res.status(400).json({
-        msg: "referenceImageUrl and selfie file required",
-      });
-    }
+if (!referenceImageUrl || !selfieFile) {
+  return res.status(400).json({
+    msg: "referenceImageUrl and selfie file required",
+  });
+}
 
     // 🔹 Reference image
     const referenceImg = await loadImageFromUrl(referenceImageUrl);
@@ -226,4 +226,5 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`🚀 Face service running on port ${PORT}`);
+
 });
