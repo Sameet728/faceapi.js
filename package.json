@@ -13,5 +13,11 @@
     "face-api.js": "0.22.2",
     "multer": "^2.0.2",
     "node-fetch": "^2.7.0"
+  },
+  "overrides": {
+    "@tensorflow/tfjs-core": "4.10.0",
+    "@tensorflow/tfjs-converter": "4.10.0",
+    "@tensorflow/tfjs-backend-cpu": "4.10.0",
+    "@tensorflow/tfjs-backend-webgl": "4.10.0"
   }
 }
