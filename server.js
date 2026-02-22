@@ -178,6 +178,9 @@ app.post("/verify", upload.single("selfie"), async (req, res) => {
    const referenceImageUrl = req.body?.referenceImageUrl;
 const selfieFile = req.file;
 
+    console.log("BODY:", req.body);
+console.log("FILE:", req.file);
+
 if (!referenceImageUrl || !selfieFile) {
   return res.status(400).json({
     msg: "referenceImageUrl and selfie file required",
@@ -228,3 +231,4 @@ app.listen(PORT, () => {
   console.log(`🚀 Face service running on port ${PORT}`);
 
 });
+
