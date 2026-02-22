@@ -9,7 +9,7 @@
     "@tensorflow/tfjs-node": "4.10.0",
     "canvas": "^3.2.1",
     "cors": "^2.8.6",
-    "express": "^5.2.1",
+    "express": "4.19.2",
     "face-api.js": "0.22.2",
     "multer": "^2.0.2",
     "node-fetch": "^2.7.0"
